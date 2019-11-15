@@ -1,7 +1,7 @@
 # debianCustomization
 Handy Customizations for debianbased LinuxDistros
 
-## 1 Update system without requesting a password (as non-administrative user)
+## 1. Update system without requesting a password (as non-administrative user)
 
 edit __/etc/sudoers__ file:
 
@@ -37,7 +37,7 @@ edit __/etc/sudoers__ file:
 - <kbd>y</kbd> confirm changes
 - <kbd>enter</kbd>       confirm name and check for errors
   
-  ## 2 Update system by typing only one character
+## 2. Update system by typing only one character
   
   create __bash_alias__ file
   
@@ -76,7 +76,7 @@ edit __/etc/sudoers__ file:
   - open new termial for testing: <kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>n</kbd>
   - type the following for upgrading system: <kbd>u</kbd> -> <kbd>space</kbd> -> <kbd>enter</kbd>
   
-  ## Sync time by typing only one char (e.g. due to wrong time by waking up a debian-based virtual machine)
+## 3. Sync time by typing only one char (e.g. due to wrong time by waking up a debian-based virtual machine)
   
   - open terminal
   - append or create __bash_aliases__ (see above) file
