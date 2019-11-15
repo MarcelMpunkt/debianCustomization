@@ -77,7 +77,10 @@ edit __/etc/sudoers__ file:
   - exit editor: <kbd>ctrl</kbd> + <kbd>x</kbd>
   - confirm changes: <kbd>y</kbd>
   - confirm name: <kbd>enter</kbd>
-  - open new termial for testing: <kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>n</kbd>
+  - for testing type:
+  ```console
+  source ~/.bashrc 
+  ```
   - type the following for upgrading system: <kbd>u</kbd> -> <kbd>enter</kbd>
   
 ## 3. Sync time by typing only one char (e.g. due to wrong time by waking up a debian-based virtual machine)
