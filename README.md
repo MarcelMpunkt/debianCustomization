@@ -54,10 +54,11 @@ edit __/etc/sudoers__ file:
   - create permanent __alias__
   ```console
   alias u="\
-  echo '-> Sync time:';\
+  echo -n '-> Sync time:';\
   timedatectl set-ntp 0;\
   timedatectl set-ntp 1;\
-  printf ' ✓';\
+  echo ' ✓ done';\
+  sleep 1;\
   echo '-> Updating:';\
   sudo apt-get update;\
   echo '-> Full Upgrade:';\
@@ -71,6 +72,7 @@ edit __/etc/sudoers__ file:
   echo 'System is up-to-date  ✓';\
   sleep 4;\
   exit"
+
   ```
   - exit editor: <kbd>ctrl</kbd> + <kbd>x</kbd>
   - confirm changes: <kbd>y</kbd>
@@ -94,7 +96,7 @@ edit __/etc/sudoers__ file:
   echo ' ';\
   echo 'time is up-to-date ✓';\
   exit"
-  
+  ```
 - exit editor: <kbd>ctrl</kbd> + <kbd>x</kbd>
 - confirm changes: <kbd>y</kbd>
 - confirm name: <kbd>enter</kbd>
