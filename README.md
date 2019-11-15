@@ -56,7 +56,8 @@ edit __/etc/sudoers__ file:
   alias u="\
   echo '-> Sync time:';\
   timedatectl set-ntp 0;\
-  timedatectl set-ntp 1;
+  timedatectl set-ntp 1;\
+  printf ' ✓';\
   echo '-> Updating:';\
   sudo apt-get update;\
   echo '-> Full Upgrade:';\
@@ -66,7 +67,7 @@ edit __/etc/sudoers__ file:
   echo '-> Cleanig Cache:';\
   sudo apt autoremove -y;\
   sudo apt clean -y;\
-  echo ' '
+  echo ' ';\
   echo 'System is up-to-date  ✓';\
   sleep 4;\
   exit"
