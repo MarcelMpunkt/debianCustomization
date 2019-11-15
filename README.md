@@ -1,5 +1,5 @@
-# debianCustomization
-Handy Customizations for debianbased LinuxDistros.
+# handyDebianCustomization
+Handy Customizations for debianbased LinuxDistros (like Ubuntu,...)
 Please feel free to expand the list further 👍
 
 ## 1. Update system without requesting a password (as non-administrative user)
