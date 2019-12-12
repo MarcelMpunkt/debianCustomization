@@ -71,7 +71,7 @@ edit __/etc/sudoers__ file:
   echo ' ';\
   echo 'System is up-to-date  ✓';\
   sleep 4;\
-  exit"
+  exit";
 
   ```
   - exit editor: <kbd>ctrl</kbd> + <kbd>x</kbd>
@@ -98,7 +98,8 @@ edit __/etc/sudoers__ file:
   timedatectl set-ntp 1;\
   echo ' ';\
   echo 'time is up-to-date ✓';\
-  exit"
+  sleep 4;\
+  exit";
   ```
 - exit editor: <kbd>ctrl</kbd> + <kbd>x</kbd>
 - confirm changes: <kbd>y</kbd>
