@@ -94,7 +94,7 @@ edit __/etc/sudoers__ file:
   - initiate time synchronization and exit terminal via __"t"__
   ```console
   alias t="\
-  timmedatectl set-ntp 0;\
+  timedatectl set-ntp 0;\
   timedatectl set-ntp 1;\
   echo ' ';\
   echo 'time is up-to-date ✓';\
