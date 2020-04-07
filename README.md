@@ -45,7 +45,7 @@ edit __/etc/sudoers__ file:
   - open termial
   - go to __HOME Dir__
   ```console
-  cd $HOME
+  cd
   ```
   - create __bash_aliases__ file
   ```console
@@ -88,7 +88,7 @@ edit __/etc/sudoers__ file:
   - open terminal
   - append or create __bash_aliases__ (see above) file
   ```console
-  cd $HOME;\
+  cd;\
   sudo nano .bash_aliases
   ```
   - initiate time synchronization and exit terminal via __"t"__
