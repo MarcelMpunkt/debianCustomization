@@ -8,7 +8,7 @@
   timedatectl set-ntp 1 &&\
   echo ' ✓ done' &&\
   sleep 1 &&\
-  echo '-> Updating: &&;\
+  echo '-> Updating:' &&\
   sudo apt-get update &&\
   echo '-> Full Upgrade:' &&\
   sudo apt full-upgrade -y &&\
