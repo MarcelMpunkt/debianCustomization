@@ -54,23 +54,23 @@ edit __/etc/sudoers__ file:
   - create permanent __alias__
   ```console
   alias u="\
-  echo -n '-> Sync time:';\
-  timedatectl set-ntp 0;\
-  timedatectl set-ntp 1;\
-  echo ' ✓ done';\
-  sleep 1;\
-  echo '-> Updating:';\
-  sudo apt-get update;\
-  echo '-> Full Upgrade:';\
-  sudo apt full-upgrade -y;\
-  echo '-> Dist Upgrade';\
-  sudo apt dist-upgrade -y;\
-  echo '-> Cleanig Cache:';\
-  sudo apt autoremove -y;\
-  sudo apt clean -y;\
-  echo ' ';\
-  echo 'System is up-to-date  ✓';\
-  sleep 4;\
+  echo -n '-> Sync time:' &&\
+  timedatectl set-ntp 0 &&\
+  timedatectl set-ntp 1 &&\
+  echo ' ✓ done' &&\
+  sleep 1 &&\
+  echo '-> Updating: &&;\
+  sudo apt-get update &&\
+  echo '-> Full Upgrade:' &&\
+  sudo apt full-upgrade -y &&\
+  echo '-> Dist Upgrade' &&\
+  sudo apt dist-upgrade -y &&\
+  echo '-> Cleanig Cache:' &&\
+  sudo apt autoremove -y &&\
+  sudo apt clean -y &&\
+  echo ' ' &&\
+  echo 'System is up-to-date  ✓' &&\
+  sleep 4 &&\
   exit";
 
   ```
