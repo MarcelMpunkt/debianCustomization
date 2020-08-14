@@ -104,3 +104,34 @@ edit __/etc/sudoers__ file:
 - confirm name: <kbd>enter</kbd>
 - open new termial for testing: <kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>n</kbd>
 - type the following for sync time of system: <kbd>t</kbd> -> <kbd>enter</kbd>
+
+## 4. Changing hostname before executing program via __"h"__
+
+- open terminal
+- append or create __bash_aliases__ (see above) file
+  ```console
+  cd;\
+  sudo nano .bash_aliases
+  ```
+- initiate timesync and change hostname to a random value before executing specific program
+  ```console
+  alias h="
+  echo -n '-> Sync time:' &&
+  timedatectl set-ntp 0 &&
+  timedatectl set-ntp 1 &&
+  echo ' ✓ done' &&
+  sleep 1 &&
+  echo -n 'Changning hostname:'&&
+  hostnamectl set-hostname host$RANDOM &&
+  echo ' ✓ done' &&
+  sleep 1 &&
+  (/usr/bin/XXXXXXX &)";
+
+  ```
+  - where __XXXXXX__ is name of program
+  
+- exit editor: <kbd>ctrl</kbd> + <kbd>x</kbd>
+- confirm changes: <kbd>y</kbd>
+- confirm name: <kbd>enter</kbd>
+- open new termial for testing: <kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>n</kbd>
+- type the following for sync time of system: <kbd>h</kbd> -> <kbd>enter</kbd>
