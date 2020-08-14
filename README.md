@@ -16,17 +16,17 @@ edit __/etc/sudoers__ file:
 ```cosole
 # customizations
 
-"#1000" ALL = NOPASSWD: \
-/usr/bin/apt-get update,\
-/usr/bin/apt-get upgrade,\
-/usr/bin/apt-get upgrade -y,\
-/usr/bin/apt full-upgrade,\
-/usr/bin/apt full-upgrade -y,\
-/usr/bin/apt dist-upgrade,\
-/usr/bin/apt dist-upgrade -y,\
-/usr/bin/apt autoremove,\
-/usr/bin/apt autoremove -y,\
-/usr/bin/apt clean,\
+"#1000" ALL = NOPASSWD: 
+/usr/bin/apt-get update,
+/usr/bin/apt-get upgrade,
+/usr/bin/apt-get upgrade -y,
+/usr/bin/apt full-upgrade,
+/usr/bin/apt full-upgrade -y,
+/usr/bin/apt dist-upgrade,
+/usr/bin/apt dist-upgrade -y,
+/usr/bin/apt autoremove,
+/usr/bin/apt autoremove -y,
+/usr/bin/apt clean,
 /usr/bin/apt clean -y
 
 ```
@@ -53,28 +53,26 @@ edit __/etc/sudoers__ file:
   ```
   - create permanent __alias__
   ```console
-  alias u="\
-  echo -n '-> Sync time:' &&\
-  timedatectl set-ntp 0 &&\
-  timedatectl set-ntp 1 &&\
-  echo ' ✓ done' &&\
-  sleep 1 &&\
-  echo '-> Updating: &&;\
-  sudo apt-get update &&\
-  echo '-> Full Upgrade:' &&\
-  sudo apt full-upgrade -y &&\
-  echo '-> Dist Upgrade' &&\
-  sudo apt dist-upgrade -y &&\
-  echo '-> Cleanig Cache:' &&\
-  sudo apt autoremove -y &&\
-  sudo apt clean -y &&\
-  echo ' ' &&\
-  echo 'System is up-to-date  ✓' &&\
-  sleep 4 &&\
+  alias u="
+  echo -n '-> Sync time:' &&
+  timedatectl set-ntp 0 &&
+  timedatectl set-ntp 1 &&
+  echo ' ✓ done' &&
+  sleep 1 &&
+  echo '-> Updating: ' &&
+  sudo apt-get update &&
+  echo '-> Full Upgrade:' &&
+  sudo apt full-upgrade -y &&
+  echo '-> Cleanig Cache:' &&
+  sudo apt autoremove -y &&
+  sudo apt clean -y &&
+  echo ' ' &&
+  echo 'System is up-to-date  ✓' &&
+  sleep 4 &&
   exit";
 
   ```
-  - exit editor: <kbd>ctrl</kbd> + <kbd>x</kbd>
+  - exit nano: <kbd>ctrl</kbd> + <kbd>x</kbd>
   - confirm changes: <kbd>y</kbd>
   - confirm name: <kbd>enter</kbd>
   - for testing type:
@@ -93,12 +91,12 @@ edit __/etc/sudoers__ file:
   ```
   - initiate time synchronization and exit terminal via __"t"__
   ```console
-  alias t="\
-  timedatectl set-ntp 0;\
-  timedatectl set-ntp 1;\
-  echo ' ';\
-  echo 'time is up-to-date ✓';\
-  sleep 4;\
+  alias t="
+  timedatectl set-ntp 0 &&
+  timedatectl set-ntp 1 &&
+  echo ' ' &&
+  echo 'time is up-to-date ✓' &&
+  sleep 4 &&
   exit";
   ```
 - exit editor: <kbd>ctrl</kbd> + <kbd>x</kbd>
