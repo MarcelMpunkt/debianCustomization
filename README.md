@@ -134,4 +134,12 @@ edit __/etc/sudoers__ file:
 - confirm changes: <kbd>y</kbd>
 - confirm name: <kbd>enter</kbd>
 - open new termial for testing: <kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>n</kbd>
-- type the following for sync time of system: <kbd>h</kbd> -> <kbd>enter</kbd>
+- type the following for sync time of system and start specific programm: <kbd>h</kbd> -> <kbd>enter</kbd>
+
+## 5. Turn off automatic screen lock
+
+- open terminal and type:
+```console
+gsettings set org.gnome.desktop.session idle-delay 0
+```
+
