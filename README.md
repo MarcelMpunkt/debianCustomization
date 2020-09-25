@@ -136,10 +136,11 @@ edit __/etc/sudoers__ file:
 - open new termial for testing: <kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>n</kbd>
 - type the following for sync time of system and start specific programm: <kbd>h</kbd> -> <kbd>enter</kbd>
 
-## 5. Turn off automatic screen lock
+## 5. Turn off automatic screen lock and screensaver
 
 - open terminal and type:
 ```console
-gsettings set org.gnome.desktop.session idle-delay 0
+gsettings set org.gnome.desktop.session idle-delay 0 &&\
+gsettings set org.gnome.desktop.screensaver lock-delay 0
 ```
 
